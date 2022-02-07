@@ -1,3 +1,30 @@
+<?php
+
+include 'connection.php';
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "INSERT INTO users (name, email, password) 
+    VALUES('$name','$email','$password')";
+
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        echo "Data inserted succesfully";
+    } else {
+        die(mysqli_error($conn));
+    }
+}
+
+
+?>
+
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -10,7 +37,7 @@
 
 <body>
     <div class="container my-5">
-        <form method="$_POST">
+        <form method="POST">
             <div class="mb-3">
                 <label class="form-label">Name</label>
                 <input type="text" class="form-control" placeholder="Enter your name" name="name" autocomplete="off">
@@ -24,7 +51,7 @@
                 <input type="password" class="form-control" placeholder="Enter your password" name="password">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </form>
     </div>
 
