@@ -17,11 +17,11 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" placeholder="Enter your email" name="email" autocomplete="off">
+                <input type="email" class="form-control" placeholder="Enter your email" name="email">
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" class="form-control" placeholder="Enter your password" name="password" autocomplete="off">
+                <input type="password" class="form-control" placeholder="Enter your password" name="password">
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
