@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
-        echo "Data inserted succesfully";
+       header('location:home.php');
     } else {
         die(mysqli_error($conn));
     }
@@ -21,9 +21,6 @@ if (isset($_POST['submit'])) {
 
 
 ?>
-
-
-
 
 <!doctype html>
 <html lang="en">
