@@ -31,7 +31,7 @@
                 <?php
 
   $sql = "SELECT * from users ";
-  $result = mysqli_query($conn, $sql);
+  $result = mysqli_query($conn,$sql);
   if($result){
     while($row=mysqli_fetch_assoc($result)){
         $id=$row['id'];
@@ -44,9 +44,9 @@
         <td> $email </td>
         <td> $password </td>
         <td>
-            <button class='btn btn-primary text-light'><a href='update.php'>Update</a></button>
-            <button class='btn btn-danger'>Delete</button></td>
-        
+        <a href='update.php?updateid=$id'><button class='btn btn-primary text-light'>Update</button></a>
+        <a href='delete.php?deleteid=$id'><button class='btn btn-danger text-light'>Delete</button></a>
+        </td>
         </tr>";
     }
   }
