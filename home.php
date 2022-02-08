@@ -15,7 +15,9 @@
 
 <body>
     <div class="container">
-        <button class="btn btn-primary my-5"><a href="user.php" class="text-light">Add User</a></button>
+    <div class="text-center my-5">
+        <img src="photo1.svg" class="img-fluid" alt="Photo">
+    </div>
         <table class="table">
             <thead>
                 <tr>
@@ -57,6 +59,7 @@
 
             </tbody>
         </table>
+        <button class="btn btn-primary my-5"><a href="user.php" class="text-light">Add User</a></button>
     </div>
 
 </body>
