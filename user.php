@@ -34,6 +34,10 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div class="container my-5">
+    <div class="h1 display-1 text-center mt-3 mb-2 fw-bold fst-italic text-primary">Add a new User</div>
+    <div class="text-center mb-5">
+        <img src="photo1.svg" class="img-fluid" alt="Photo">
+    </div>
         <form method="POST">
             <div class="mb-3">
                 <label class="form-label">Name</label>
