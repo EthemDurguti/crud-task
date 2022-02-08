@@ -3,7 +3,7 @@
 include 'connection.php';
 $id = $_GET['updateid'];
 $sql="SELECT * FROM users WHERE id=$id";
-$result=$mysqli_querry($conn,$sql);
+$result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_assoc($result);
 $name=$row['name'];
 $email=$row['email'];
@@ -42,15 +42,16 @@ if (isset($_POST['submit'])) {
         <form method="POST">
             <div class="mb-3">
                 <label class="form-label">Name</label>
-                <input type="text" class="form-control" placeholder="Enter your name" name="name" autocomplete="off">
+                <input type="text" class="form-control" placeholder="Enter your name" name="name" value=<?php
+                echo "$name";?> autocomplete="off">
             </div>
             <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" placeholder="Enter your email" name="email">
+                <input type="email" class="form-control" placeholder="Enter your email" name="email" value=<?php echo "$email";?>>
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" class="form-control" placeholder="Enter your password" name="password">
+                <input type="password" class="form-control" placeholder="Enter your password" name="password" value=<?php echo '$password'; ?>>
             </div>
 
             <button type="submit" class="btn btn-primary" name="submit">Update</button>
