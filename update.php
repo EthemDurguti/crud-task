@@ -9,11 +9,13 @@ $name=$row['name'];
 $email=$row['email'];
 $password=['password'];
 
+
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $sql = "UPDATE users set id='$id', name='$name', email='$email', password='$password' WHERE id=$id";
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $sql = "UPDATE users set id='$id', name='$name', email='$email', password='$hashed_password' WHERE id=$id";
 
     $result = mysqli_query($conn, $sql);
 
